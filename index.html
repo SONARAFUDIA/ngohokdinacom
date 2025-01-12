@@ -4,6 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>NgeCare</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -14,9 +20,18 @@
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
             crossorigin="anonymous"
         />
+        <style>
+            * {
+                font-family: "Raleway", serif;
+            }
+            .nav-link:hover {
+                border-bottom: 1px solid aquamarine;
+                animation: none;
+            }
+        </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg sticky-top">
+        <nav class="navbar navbar-expand-lg sticky-top bg-body">
             <div class="container-fluid ms-5 me-5">
                 <a class="navbar-brand fs-1 h1" href="#">NgeCare</a>
                 <button
@@ -31,36 +46,46 @@
                     <span id="mobilebtn"><i class="bi bi-list h1"></i></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto fs-5">
                         <li class="nav-item">
-                            <a class="nav-link active fs-5" href="#">Home</a>
+                            <a class="nav-link active" href="index.html">Home</a>
                         </li>
-                        <li class="nav-item fs-5">
+                        <li class="nav-item">
                             <a class="nav-link" href="article.html">Article</a>
                         </li>
-                        <li class="nav-item fs-5">
+                        <li class="nav-item">
                             <a class="nav-link" href="#">Release</a>
                         </li>
-                        <li class="nav-item fs-5">
+                        <li class="nav-item">
                             <a class="nav-link" href="#">Reservation</a>
                         </li>
-                        <li class="nav-item fs-5">
+                        <li class="nav-item">
                             <a class="nav-link" href="#">About Us</a>
                         </li>
-                        <li class="nav-item fs-5 d-flex">
-                            <i class="nav-link bi bi-person-circle"></i>
-                            <a class="nav-link" href="#">Login</a>
+                        <li class="nav-item d-flex">
+                            <a class="nav-link" href="#"
+                                ><i class="bi bi-person-circle pe-2"></i>Login</a
+                            >
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <hr style="width: 70%; margin: 0 auto" class="pb-3" />
+        <hr style="width: 90%; margin: 0 auto" class="" />
+        <!-- Section -->
         <section>
-            <div class="container d-lg-flex">
-                <div style="height: 100px; width: 100px; background-color: aqua"></div>
+            <!-- IMG -->
+            <div class="d-lg-flex align-items-center">
+                <div>
+                    <img
+                        width="50%"
+                        src="https://img.freepik.com/free-photo/authentic-scene-young-person-undergoing-psychological-therapy_23-2150161911.jpg?t=st=1736654347~exp=1736657947~hmac=066640a7d658d3751348f30871c6a6851cfd7174e2447c3d1edad91f989b01d0&w=1480"
+                        alt=""
+                    />
+                    <div></div>
+                </div>
                 <div class="p-2">
-                    <p>
+                    <p id="banner" class="container-md fs-4 p-5">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore aut
                         quasi, deserunt, quae atque asperiores omnis odit dolor incidunt soluta
                         labore mollitia voluptatibus ducimus nam? Repellendus asperiores itaque odit
@@ -69,10 +94,30 @@
                 </div>
             </div>
         </section>
-        <!-- <script
+        <section class="bg-info-subtle p-5">
+            <br />
+            <br />
+            <br />
+            <div class="container">
+                <h1><b>Tujuan Kami</b></h1>
+                <p class="fs-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nostrum reiciendis
+                    atque mollitia nemo aliquam vitae distinctio vel, fugiat facilis officia
+                    aspernatur pariatur rerum sint, quam repellat praesentium. Officiis,
+                    consectetur!
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container-fluid"></div>
+            <h2 class="">Berita terkait kesehatan mental</h2>
+        </section>
+
+        <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"
-        ></script> -->
+        ></script>
     </body>
 </html>
