@@ -1,3 +1,10 @@
+/* Layarrrrrrrrrrrr*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Navbarrrrrrrrrrrrrrrrrrrrrrrr */
 .nav-link:hover {
     color: #FFC6C6;
@@ -29,7 +36,20 @@ hr {
     background-color: #FFC6C6;
     margin-bottom: 10px;
 }
-  
+
+.rounded {
+    width: 75%;
+}
+
+.slider {
+  width: 100px;
+  height: 900px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px; 
+}
+
+
   /* ---------footet----------- */
   footer {
     color: #fff;
