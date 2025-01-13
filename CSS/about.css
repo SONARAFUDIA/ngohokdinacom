@@ -1,101 +1,97 @@
 .crousel img {
     height: 200px;
-}
-/* ------------visi misi ----------- */
-.container {
+  }
+  /* ------------visi misi ----------- */
+  .container {
     text-align: center;
-}
-.vatas,
-.matas {
+  }
+  .vatas, .matas {
     background-color: aliceblue;
     border-radius: 10px 10px 0 0;
-}
-.misi,
-.visi {
+  }
+  .misi, .visi {
     background-color: aqua;
     border-radius: 10px;
     margin-right: 200px;
-    margin-left: 200px;
+    margin-left: 200px;  
     margin-top: 40px;
-}
-.vbawah,
-.mbawah {
+  }
+  .vbawah, .mbawah {
     padding-top: 10px;
     padding-bottom: 10px;
-}
-
-/* -------------- contact----------- */
-
-.kontak {
+  }
+  
+  /* -------------- contact----------- */
+  
+  .kontak {
     justify-content: center;
     align-items: center;
     gap: 150px;
     display: flex;
     border: solid red 1px;
-}
-.telepon {
+  }
+  .telepon {
     border: solid blue 1px;
     width: 300px;
-}
-.telepon1 {
+  }
+  .telepon1 {
     display: flex;
-}
-.telepon img {
+  }
+  .telepon img {
     width: 70px;
     height: 70px;
-}
-.telepon h1 {
+  }
+  .telepon h1 {
     padding-left: 20px;
-}
-
-.email {
+  }
+  
+  .email {
     border: solid blue 1px;
     width: 300px;
-}
-.email1 {
+  }
+  .email1 {
     display: flex;
-}
-.email img {
+  }
+  .email img {
     width: 70px;
     height: 70px;
-}
-.email h1 {
+  }
+  .email h1 {
     padding-left: 20px;
-}
-
-/* ------------ form ------------ */
-.form-container {
+  }
+  
+  /* ------------ form ------------ */
+  .form-container {
     margin-left: 150px;
     border: solid red 1px;
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1230px; /* Lebar maksimum form */
+    max-width: 1230px;/* Lebar maksimum form */
     background: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
+  }
+  
+  h1 {
     text-align: center;
     margin-bottom: 20px;
-}
-
-.form-content {
+  }
+  
+  .form-content {
     display: flex;
     justify-content: space-between;
     gap: 20px; /* Jarak antar kolom */
-}
-
-.form-left,
-.form-right {
+  }
+  
+  .form-left, .form-right {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-
+  
     flex: 1; /* Bagian kiri dan kanan memiliki lebar yang sama */
-}
-
-form input {
+  }
+  
+  form input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -103,24 +99,24 @@ form input {
     border-radius: 5px;
     font-size: 16px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-form input:focus {
+  }
+  
+  form input:focus {
     border: 1px solid #03a9f4;
     outline: none;
     box-shadow: 0px 2px 5px rgba(3, 169, 244, 0.5);
-}
-
-form input::placeholder {
+  }
+  
+  form input::placeholder {
     color: #888;
-}
-
-h2 {
+  }
+  
+  h2 {
     margin-bottom: 10px;
-}
-
-/* ---------footet----------- */
-footer {
+  }
+  
+  /* ---------footet----------- */
+  footer {
     color: #fff;
     font-size: 24px;
     padding-top: 100px;
@@ -128,35 +124,37 @@ footer {
     display: flex;
     justify-content: space-around;
     background-color: #03a9f4;
-}
-footer i {
+  }
+  footer i {
     font-size: 30px;
     margin-right: 10px;
-}
-.kiri {
+  }
+  .kiri {
     display: grid;
     place-items: center;
-}
-.kiri img {
+  }
+  .kiri img {
     width: 200px;
-}
-.em {
+  }
+  .em {
     display: flex;
-}
-.em img {
+  }
+  .em img{
+  
     width: 100px;
-}
-
-.fkanan {
+  }
+  
+  .fkanan {
     display: flex;
-}
-.fkanan img {
+  }
+  .fkanan img{
+  
     width: 100px;
-}
-
-.copy {
+  }
+  
+  .copy {
     background-color: blanchedalmond;
     text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
-}
+  }
