@@ -117,7 +117,21 @@ h2 {
 
 /* ---------footet----------- */
 footer {
+  color: #fff;
+  font-size: 24px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   display: flex;
+  justify-content: space-around;
+  background-color: #03a9f4;
+}
+footer i {
+  font-size: 30px;
+  margin-right: 10px;
+}
+.kiri {
+  display: grid;
+  place-items: center;
 }
 .kiri img {
   width: 200px;
@@ -130,7 +144,17 @@ footer {
   width: 100px;
 }
 
+.fkanan {
+  display: flex;
+}
+.fkanan img{
+
+  width: 100px;
+}
 
 .copy {
+  background-color: blanchedalmond;
   text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
