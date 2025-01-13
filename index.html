@@ -20,19 +20,21 @@
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="JS/swiper.js" />
+        <link rel="stylesheet" href="CSS/swiper.css" />
         <style>
             * {
-                font-family: "Raleway", serif;
+                color: #28282b;
             }
-            .nav-link:hover {
-                border-bottom: 1px solid aquamarine;
-                animation: none;
+            #tujuan {
+                padding-top: 5vw;
+                background-color: #94b1ff;
             }
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg sticky-top bg-body">
-            <div class="container-fluid ms-5 me-5">
+        <nav class="navbar navbar-expand-lg sticky-top bg-body border-bottom">
+            <div class="container-fluid ms-md-5 me-md-5">
                 <a class="navbar-brand fs-1 h1" href="#">NgeCare</a>
                 <button
                     class="navbar-toggler"
@@ -46,7 +48,7 @@
                     <span id="mobilebtn"><i class="bi bi-list h1"></i></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto fs-5">
+                    <ul class="navbar-nav ms-auto fs-4">
                         <li class="nav-item">
                             <a class="nav-link active" href="index.html">Home</a>
                         </li>
@@ -71,21 +73,18 @@
                 </div>
             </div>
         </nav>
-        <hr style="width: 90%; margin: 0 auto" class="" />
         <!-- Section -->
-        <section>
-            <!-- IMG -->
-            <div class="d-lg-flex align-items-center">
-                <div>
-                    <img
-                        width="50%"
-                        src="https://img.freepik.com/free-photo/authentic-scene-young-person-undergoing-psychological-therapy_23-2150161911.jpg?t=st=1736654347~exp=1736657947~hmac=066640a7d658d3751348f30871c6a6851cfd7174e2447c3d1edad91f989b01d0&w=1480"
-                        alt=""
-                    />
-                    <div></div>
-                </div>
-                <div class="p-2">
-                    <p id="banner" class="container-md fs-4 p-5">
+        <!-- Pengenalan -->
+        <section id="pengenalan" class="text-center">
+            <div class="d-md-flex align-items-center">
+                <img
+                    width="50%"
+                    src="https://img.freepik.com/free-photo/authentic-scene-young-person-undergoing-psychological-therapy_23-2150161911.jpg?t=st=1736654347~exp=1736657947~hmac=066640a7d658d3751348f30871c6a6851cfd7174e2447c3d1edad91f989b01d0&w=1480"
+                    alt=""
+                />
+                <div class="container text-md-end p-5">
+                    <h1><b>Pengenalan</b></h1>
+                    <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore aut
                         quasi, deserunt, quae atque asperiores omnis odit dolor incidunt soluta
                         labore mollitia voluptatibus ducimus nam? Repellendus asperiores itaque odit
@@ -94,11 +93,10 @@
                 </div>
             </div>
         </section>
-        <section class="bg-info-subtle p-5">
-            <br />
-            <br />
-            <br />
-            <div class="container">
+        <!-- Section -->
+        <!-- Tujuan -->
+        <section id="tujuan" class="pb-5 text-md-start text-center">
+            <div class="container pt-5 pb-5">
                 <h1><b>Tujuan Kami</b></h1>
                 <p class="fs-4">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga nostrum reiciendis
@@ -110,14 +108,81 @@
         </section>
 
         <section>
-            <div class="container-fluid"></div>
-            <h2 class="">Berita terkait kesehatan mental</h2>
+            <h2 class="text-center pb-5">Berita terkait kesehatan mental</h2>
+            <!-- Slider main container -->
+            <div>
+                <swiper-container
+                    class="mySwiper"
+                    slides-per-view="3"
+                    centered-slides="true"
+                    space-between="100"
+                    pagination="true"
+                    pagination-type="fraction"
+                    navigation="true"
+                >
+                    <swiper-slide>
+                        <div class=" text-bg-dark">
+                            <img
+                                src="https://scontent.fsrg4-1.fna.fbcdn.net/v/t39.30808-6/473322879_2051485538637826_3233500290378247682_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHOTHM9FLTPv4ZT0vBmYa74kAQLaRAJtd-QBAtpEAm132hfw4pSJtGRmz8OtsFXEDCvOjYrXK-6I7sRX50zMCEj&_nc_ohc=FytqM6pslKUQ7kNvgHJqIVv&_nc_zt=23&_nc_ht=scontent.fsrg4-1.fna&_nc_gid=Aww0YDvttGJAF36AyqNHrRY&oh=00_AYCi_NlGhnONDJjkilKErEpOBB_-7nLBEgWwWGU0IVqu6Q&oe=6789E4D4"
+                                class="card-img"
+                                alt="..."
+                            />
+                            <div class="card-img-overlay">
+                                <div class="position-absolute bottom-0 " style="background-color: rgba(0, 0, 0, 0.5)">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">
+                                        This is a wider card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit
+                                        longer.
+                                    </p>
+                                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="card m-5" style="width: 18rem">
+                            <img
+                                class="card-img-top"
+                                src="https://scontent.fsrg4-1.fna.fbcdn.net/v/t39.30808-6/470618794_900026688945207_4751500057857841436_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHayRw6ZIj4lL8gBKGgQO9zi-ayZfoNjE-L5rJl-g2MT_d8AtFpRqgkcodQyeoR5nl-z0jCXhzXDh5qIxF1tP5_&_nc_ohc=P9EF7lai7SQQ7kNvgEjOGn5&_nc_zt=23&_nc_ht=scontent.fsrg4-1.fna&_nc_gid=AplajUiujSDfep9dPP291KA&oh=00_AYCNG7gwBQkgdSUm20rbognMbwnyHQZkx1jwShZKX5pnbA&oe=6789D308"
+                                alt="..."
+                            />
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.
+                                </p>
+                            </div>
+                        </div>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="card m-5" style="width: 18rem">
+                            <img
+                                src="https://scontent.fsrg4-1.fna.fbcdn.net/v/t39.30808-6/470618794_900026688945207_4751500057857841436_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHayRw6ZIj4lL8gBKGgQO9zi-ayZfoNjE-L5rJl-g2MT_d8AtFpRqgkcodQyeoR5nl-z0jCXhzXDh5qIxF1tP5_&_nc_ohc=P9EF7lai7SQQ7kNvgEjOGn5&_nc_zt=23&_nc_ht=scontent.fsrg4-1.fna&_nc_gid=AplajUiujSDfep9dPP291KA&oh=00_AYCNG7gwBQkgdSUm20rbognMbwnyHQZkx1jwShZKX5pnbA&oe=6789D308"
+                                class="card-img-top"
+                                alt="..."
+                            />
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Some quick example text to build on the card title and make up
+                                    the bulk of the card's content.
+                                </p>
+                            </div>
+                        </div>
+                    </swiper-slide>
+                </swiper-container>
         </section>
-
+        <footer>
+            <div class="container">
+                <p>FOOTER</p>
+            </div>
+        </footer>
+        <!-- CDN script -->
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"
         ></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     </body>
 </html>
