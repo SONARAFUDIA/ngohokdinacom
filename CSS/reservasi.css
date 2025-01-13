@@ -1,0 +1,96 @@
+/* Layarrrrrrrrrrrr*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbarrrrrrrrrrrrrrrrrrrrrrrr */
+.nav-link:hover {
+    color: #FFC6C6;
+}
+.no-hover:hover {
+    color: inherit;
+}
+#navbarr {
+position: fixed; 
+top: 0; 
+width: 100%;
+z-index: 2;
+transition: top 0.5s; 
+}
+
+/* Bodyyyyyyyyyyyyyyyyyyyyyyyyy */
+hr {
+    border: 0;
+    border-top: 5px solid #FFC6C6;
+    width: 75%;
+    margin: 0 auto;
+}
+.lead {
+    font-size: 30px;
+    text-align: justify;
+}
+
+.btn {
+    background-color: #FFC6C6;
+    margin-bottom: 10px;
+}
+
+.rounded {
+    width: 75%;
+}
+
+.slider {
+  width: 100px;
+  height: 900px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px; 
+}
+
+
+  /* ---------footet----------- */
+  footer {
+    color: #fff;
+    margin-top: 100%;
+    font-size: 24px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #03a9f4;
+  }
+  footer i {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  .kiri {
+    display: grid;
+    place-items: center;
+  }
+  .kiri img {
+    width: 200px;
+  }
+  .em {
+    display: flex;
+  }
+  .em img{
+  
+    width: 100px;
+  }
+  
+  .fkanan {
+    display: flex;
+  }
+  .fkanan img{
+  
+    width: 100px;
+  }
+  
+  .copy {
+    background-color: blanchedalmond;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
