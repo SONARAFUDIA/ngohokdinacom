@@ -30,7 +30,10 @@
             transition: top 0.5s; 
             }
             hr {
-                color: black;
+                border: 0; /* Menghapus border default */
+                border-top: 5px solid #FFC6C6; /* Menambahkan garis atas dengan ketebalan 3px */
+                width: 75%; /* Mengatur lebar garis sesuai kebutuhan */
+                margin: 0 auto; /* Menempatkan garis di tengah secara horizontal */
             }
             .lead {
                 font-size: 30px;
@@ -100,9 +103,19 @@
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-4">
-                        <div class="d-block" style="border: 2px solid black;">
-                            <h1 class="fw-bold display-">Konsultasi Dapat Mengendalikan Stress</h1><br>
+                    <div class="col-4 p-2" style="border: 1px solid #FFC6C6; border-radius: 5%;">
+                        <div class="d-block" style="text-align: center;">
+                            <img src="" alt="">
+                            <h3 class="lead fs-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic consequatur voluptatum 
+                                voluptas libero, id cupiditate vero laudantium veniam a ab distinctio.
+                            </h3>
+                        </div>
+                        <hr class="custom-hr w-75">
+                        <div class="d-block mt-5">
+                            <h1 class="fw-bold display-">Penjelasan Aturan</h1><br>
+                            <h3 class="lead fs-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic consequatur voluptatum 
+                                voluptas libero, id cupiditate vero laudantium veniam a ab distinctio.
+                            </h3>
                         </div>
                     </div>
                     <div class="col">
