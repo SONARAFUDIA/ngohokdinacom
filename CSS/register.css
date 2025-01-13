@@ -1,0 +1,150 @@
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(20%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+body {
+    background-color: rgba(191, 236, 255, 1);
+}
+  .login-container {
+
+    background-color: rgba(191, 236, 255, 1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    font-family: Inter, sans-serif;
+    color: rgba(0, 0, 0, 1);
+
+  }
+
+  .login-wrapper {
+    border-radius: 25px;
+    display: flex;
+    width: 650px;
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .login-header {
+    font-size: 50px;
+    align-self: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .login-form-container {
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+    flex-direction: column;
+    font-size: 24px;
+    font-weight: 100;
+    padding: 80px 30px 30px;
+  }
+
+  .input-wrapper {
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 15px 15px;
+    border: 1px solid rgb(0, 0, 0);
+    margin-bottom: 15px;
+    position: relative;
+  }
+
+  .form-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    background: transparent;
+  }
+
+  .submit-button {
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 1);
+    align-self: center;
+    margin-top: 40px;
+    width: 341px;
+    max-width: 100%;
+    padding: 10px 10px;
+    border: 1px solid rgba(255, 1, 1, 1);
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 200;
+  }
+
+  .auth-toggle {
+    align-self: center;
+    display: flex;
+    margin-top: 40px;
+    width: 542px;
+    max-width: 100%;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .toggle-button {
+    border-radius: 25px;
+    font-size: 24px;
+    font-weight: 200;
+    padding: 5px 46px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    cursor: pointer;
+  }
+
+  .toggle-button-active {
+    background-color: rgba(191, 236, 255, 1);
+  }
+
+  .toggle-button-inactive {
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  @media (max-width: 991px) {
+    .login-container {
+      padding: 0 20px 100px;
+    }
+
+    .login-header {
+      font-size: 40px;
+    }
+
+    .login-form-container {
+      max-width: 100%;
+      margin-top: 40px;
+      padding: 100px 20px 0;
+    }
+
+    .input-wrapper {
+      max-width: 100%;
+      padding: 15px 20px;
+    }
+
+    .forgot-password {
+      margin-left: 10px;
+    }
+
+    .submit-button {
+      margin-top: 40px;
+      padding: 20px;
+    }
+
+    .auth-toggle {
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .toggle-button {
+      padding: 5px 20px;
+    }
+  }
