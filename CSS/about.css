@@ -1,136 +1,162 @@
 .crousel img {
-  height: 200px;
+    height: 200px;
 }
 /* ------------visi misi ----------- */
 .container {
-  text-align: center;
+    text-align: center;
 }
-.vatas, .matas {
-  background-color: aliceblue;
-  border-radius: 10px 10px 0 0;
+.vatas,
+.matas {
+    background-color: aliceblue;
+    border-radius: 10px 10px 0 0;
 }
-.misi, .visi {
-  background-color: aqua;
-  border-radius: 10px;
-  margin-right: 200px;
-  margin-left: 200px;  
-  margin-top: 40px;
+.misi,
+.visi {
+    background-color: aqua;
+    border-radius: 10px;
+    margin-right: 200px;
+    margin-left: 200px;
+    margin-top: 40px;
 }
-.vbawah, .mbawah {
-  padding-top: 10px;
-  padding-bottom: 10px;
+.vbawah,
+.mbawah {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /* -------------- contact----------- */
 
 .kontak {
-  justify-content: center;
-  align-items: center;
-  gap: 150px;
-  display: flex;
-  border: solid red 1px;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    display: flex;
+    border: solid red 1px;
 }
 .telepon {
-  border: solid blue 1px;
-  width: 300px;
+    border: solid blue 1px;
+    width: 300px;
 }
 .telepon1 {
-  display: flex;
+    display: flex;
 }
 .telepon img {
-  width: 70px;
-  height: 70px;
+    width: 70px;
+    height: 70px;
 }
 .telepon h1 {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
 .email {
-  border: solid blue 1px;
-  width: 300px;
+    border: solid blue 1px;
+    width: 300px;
 }
 .email1 {
-  display: flex;
+    display: flex;
 }
 .email img {
-  width: 70px;
-  height: 70px;
+    width: 70px;
+    height: 70px;
 }
 .email h1 {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
 /* ------------ form ------------ */
 .form-container {
-  margin-left: 150px;
-  border: solid red 1px;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1230px;/* Lebar maksimum form */
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 150px;
+    border: solid red 1px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1230px; /* Lebar maksimum form */
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-  text-align: center;
-  margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .form-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px; /* Jarak antar kolom */
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Jarak antar kolom */
 }
 
-.form-left, .form-right {
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+.form-left,
+.form-right {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 
-  flex: 1; /* Bagian kiri dan kanan memiliki lebar yang sama */
+    flex: 1; /* Bagian kiri dan kanan memiliki lebar yang sama */
 }
 
 form input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 16px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 form input:focus {
-  border: 1px solid #03a9f4;
-  outline: none;
-  box-shadow: 0px 2px 5px rgba(3, 169, 244, 0.5);
+    border: 1px solid #03a9f4;
+    outline: none;
+    box-shadow: 0px 2px 5px rgba(3, 169, 244, 0.5);
 }
 
 form input::placeholder {
-  color: #888;
+    color: #888;
 }
 
 h2 {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 /* ---------footet----------- */
 footer {
-  display: flex;
+    color: #fff;
+    font-size: 24px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #03a9f4;
+}
+footer i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+.kiri {
+    display: grid;
+    place-items: center;
 }
 .kiri img {
-  width: 200px;
+    width: 200px;
 }
 .em {
-  display: flex;
+    display: flex;
 }
-.em img{
-
-  width: 100px;
+.em img {
+    width: 100px;
 }
 
+.fkanan {
+    display: flex;
+}
+.fkanan img {
+    width: 100px;
+}
 
 .copy {
-  text-align: center;
+    background-color: blanchedalmond;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
