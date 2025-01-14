@@ -14,12 +14,12 @@
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="CSS/reservasi.css">
+        <link rel="stylesheet" href="CSS/reservasi.css" />
     </head>
+
     <body>
-        <section class="navbarr">
-        <nav class="navbar navbar-expand-lg sticky-top">
-            <div class="container">
+        <nav class="navbar navbar-expand-lg sticky-top bg-body border-bottom">
+            <div class="container-fluid ms-md-5 me-md-5">
                 <a class="navbar-brand fs-1 h1" href="#">NgeCare</a>
                 <button
                     class="navbar-toggler"
@@ -33,177 +33,344 @@
                     <span id="mobilebtn"><i class="bi bi-list h1"></i></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto fs-4">
                         <li class="nav-item">
-                            <a id="nava" class="nav-link fs-5" href="#">Home</a>
+                            <a class="nav-link active" href="index.html">Home</a>
                         </li>
-                        <li class="nav-item fs-5">
-                            <a class="nav-link" href="#">Article</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="article.html">Article</a>
                         </li>
-                        <li class="nav-item fs-5">
-                            <a class="nav-link" href="#">Release</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="release.html">Release</a>
                         </li>
-                        <li class="nav-item fs-5">
-                            <a class="nav-link active" href="#">Reservation</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reservasi.html">Reservation</a>
                         </li>
-                        <li class="nav-item fs-5">
-                            <a class="nav-link" href="#">About Us</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about_us.html">About Us</a>
                         </li>
-                        <li class="nav-item fs-5 d-flex">
-                            <i class="nav-link bi bi-person-circle no-hover"></i>
-                            <a class="nav-link" href="#">Login</a>
+                        <li class="nav-item d-flex">
+                            <a class="nav-link" href="#"
+                                ><i class="bi bi-person-circle pe-2"></i>Login</a
+                            >
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <hr style="width: 90%; margin: 0 auto; border-width: 0.5vh;">
-        </section>
-        <section class="container"></section>
 
-        <section id="hero" class="d-flex justify-content-center mb-4 text-dark p-5 text-sm-start" style="background-color: #F7B5CA;">
+        <section
+            id="hero"
+            class="d-flex justify-content-center mb-4 text-dark p-5 text-sm-start"
+            style="background-color: #f7b5ca"
+        >
             <div class="container">
                 <div>
-                    <h1 class="fw-bold display-4">Konsultasi Dapat Mengendalikan Stress</h1><br>
-                    <h3 class="lead">Stress itu wajar karena sewajarnya manusia merasakan stress, tapi kalo stress berlebihan bagaimana?
-                                        Sebagian orang bisa mengendalikan hal tersebut dan sebagiannya tidak bisa. Disini kami menyediakan layanan
-                                        konsultasi agar semua orang bisa mengendalikan stressnya dengan baik dan tidak menimbulkan hal-hal yang tidak 
-                                        di inginkan. Kami menghadirkan psikolog terbaik dengan keunggulan di bidangnya masing masing. Jadi tunggu
-                                        apalagi, ayooo konsultasi untuk pengendalian stress 
+                    <h1 class="fw-bold display-4">Konsultasi Dapat Mengendalikan Stress</h1>
+                    <br />
+                    <h3 class="lead">
+                        Stress itu wajar karena sewajarnya manusia merasakan stress, tapi kalo
+                        stress berlebihan bagaimana? Sebagian orang bisa mengendalikan hal tersebut
+                        dan sebagiannya tidak bisa. Disini kami menyediakan layanan konsultasi agar
+                        semua orang bisa mengendalikan stressnya dengan baik dan tidak menimbulkan
+                        hal-hal yang tidak di inginkan. Kami menghadirkan psikolog terbaik dengan
+                        keunggulan di bidangnya masing masing. Jadi tunggu apalagi, ayooo konsultasi
+                        untuk pengendalian stress
                     </h3>
                 </div>
             </div>
         </section>
 
-        <section class="psikolog">
-            <div style="margin-left: 30px;">
-                <div class="row">
-                    <div class="col-4 p-2" style="border: 1px solid #FFC6C6; border-radius: 5%;">
-                        <div class="d-block" style="text-align: center;">
-                            <h1 class="fw-bold">Penjelasan Aturan</h1><br>
-                            <h3 class="lead fs-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic consequatur voluptatum 
-                                voluptas libero, id cupiditate vero laudantium veniam a ab distinctio.
-                            </h3><br>
+        <section>
+            <div class="container-fluid d-flex justify-content-between">
+                <!-- Kiri -->
+                <div class="col-4 p-3" style="border: 1px solid #ffc6c6; border-radius: 25px">
+                    <h1 class="text-center">Penjelasan Aturan</h1>
+                    <ul>
+                        <li>Lorem, ipsum dolor.</li>
+                        <li>Lorem, ipsum dolor.</li>
+                        <li>Lorem, ipsum dolor.</li>
+                    </ul>
+                    <hr class="custom-hr w-75" />
+                    <div class="d-block mt-5">
+                        <img src="asset/logso.png" alt="" class="mx-auto d-block mb-4" />
+                        <div class="d-grid col-9 mx-auto">
+                            <input class="btn" type="submit" value="DAFTAR" />
                         </div>
-                        <hr class="custom-hr w-75">
-                        <div class="d-block mt-5">
-                            <img src="asset/logso.png" alt="" class="rounded mx-auto d-block mb-4">
-                            <div class="d-grid gap-2 col-9 mx-auto">
-                                <input class="btn" type="submit" value="DAFTAR">
-                            </div>
-                        </div>
-                        <hr class="custom-hr w-75">
-                        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                <img src="asset/shafwan.jpg" class="d-block slider" alt="...">
-                                <div class="carousel-caption d-none d-md-block">
-                                </div>
-                              </div>
-                              <div class="carousel-item">
-                                <img src="asset/shafwan.jpg" class="d-block slider" alt="...">
-                                <div class="carousel-caption d-none d-md-block">
-                                </div>
-                              </div>
-                              <div class="carousel-item">
-                                <img src="asset/shafwan.jpg" class="d-block slider" alt="...">
-                                <div class="carousel-caption d-none d-md-block">
-                                </div>
-                              </div>
-                            </div>
-                          </div>                          
                     </div>
-                    <div class="col
-                    ">
-                        <div class="p-2" style="text-align: center;">
-                            <h1 class="fw-bold display-4">Bertemu dengan Kagebunshin Dr. Shafwan</h1>
-                            <div class="container mt-5 mb-5">
-                                <div class="row row-cols-1 row-cols-md-2 g-3 justify-content-center">
-                                  <div class="col-lg-8 col-md-4 col-sm-12">
-                                    <div class="card" style="width: 80%; height: auto; border: none;">
-                                      <div class="container">
-                                        <div class="row">
-                                            <div class="col-5">
-                                                <img src="asset/logso.png" alt="" class="rounded mx-auto d-block mb-4" style="width: 200px;">
-                                            </div>
-                                            <div class="col">
-                                                <h1 class="fw-bold fs-5 mt-3" style="margin-bottom: 20px; text-align: justify; margin-left: 10px;">Dr. Shafwan Firjatullah</h1>
-                                                <h1 class="fw-bold fs-5" style="text-align: justify; margin-left: 10px;">Specialist: </h1>
-                                                <ul class="text-start" style=" list-style-position: inside;">
-                                                    <li>Pikiran</li>
-                                                    <li>Spiritual</li>
-                                                    <li>Fisik</li>
-                                                    <li>Sosial</li>
-                                                  </ul>
-                                            </div>
-                                            <hr class="custom-hr w-75">
-                                        </div>
-                                      </div>
-                                      <div class="card-body">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col" style="text-align: justify;">
-                                                    <h1 class="fw-bold fs-5">Jadwal</h1>
-                                                    <ul class="text-start" style="padding-left: 20px; list-style-position: inside;">
-                                                        <li>Selasa (12.00-16.00)</li>
-                                                        <li>Rabu (13.00-18.00)</li>
-                                                        <li>Sabtu (00.00-23.59)</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col">
-                                                    <h1 class="fw-bold fs-5 mt-3">Rp. 1000</h1>
-                                                    <div class="d-grid gap-2 col-9 mx-auto">
-                                                        <input class="btn" type="submit" style="border-radius: 100px;" value="Reservasi">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                          </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-lg-8 col-md-4 col-sm-12">
-                                  <div class="card" style="width: 80%; height: auto; border: none;">
-                                    <div class="container">
-                                      <div class="row">
-                                          <div class="col-5">
-                                              <img src="asset/logso.png" alt="" class="rounded mx-auto d-block mb-4" style="width: 200px;">
-                                          </div>
-                                          <div class="col">
-                                              <h1 class="fw-bold fs-5 mt-3" style="margin-bottom: 20px; text-align: justify; margin-left: 10px;">Dr. Shafwan Firjatullah</h1>
-                                              <h1 class="fw-bold fs-5" style="text-align: justify; margin-left: 10px;">Specialist: </h1>
-                                              <ul class="text-start" style=" list-style-position: inside;">
-                                                  <li>Pikiran</li>
-                                                  <li>Spiritual</li>
-                                                  <li>Fisik</li>
-                                                  <li>Sosial</li>
-                                                </ul>
-                                          </div>
-                                          <hr class="custom-hr w-75">
-                                      </div>
-                                    </div>
-                                    <div class="card-body">
-                                      <div class="container">
-                                          <div class="row">
-                                              <div class="col" style="text-align: justify;">
-                                                  <h1 class="fw-bold fs-5">Jadwal</h1>
-                                                  <ul class="text-start" style="padding-left: 20px; list-style-position: inside;">
-                                                      <li>Selasa (12.00-16.00)</li>
-                                                      <li>Rabu (13.00-18.00)</li>
-                                                      <li>Sabtu (00.00-23.59)</li>
-                                                  </ul>
-                                              </div>
-                                              <div class="col">
-                                                  <h1 class="fw-bold fs-5 mt-3">Rp. 1000</h1>
-                                                  <div class="d-grid gap-2 col-9 mx-auto">
-                                                      <input class="btn" type="submit" style="border-radius: 100px;" value="Reservasi">
-                                                  </div>
-                                              </div>
-                                          </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                  </div>
+                    <hr class="custom-hr w-75 my-3" />
+                    <div class="m-auto w-75">
+                        <div
+                            id="carouselExampleSlidesOnly"
+                            class="carousel slide"
+                            data-bs-ride="carousel"
+                        >
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="asset/shafwan.jpg" class="d-block w-100" alt="..." />
                                 </div>
+                                <div class="carousel-item">
+                                    <img src="asset/shafwan.jpg" class="d-block w-100" alt="..." />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="asset/shafwan.jpg" class="d-block w-100" alt="..." />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kanan -->
+                <div class="col-7 ms-3">
+                    <h1 class="text-center mb-5">Bertemu dengan psikolog</h1>
+                    <div class="row mb-5">
+                        <div class="col">
+                            <div>
+                                <div class="d-flex">
+                                    <img
+                                        src="asset/logso.png"
+                                        alt=""
+                                        style="width: 13rem; object-fit: contain"
+                                    />
+                                    <div>
+                                        <h4>Dr. Shafwan Firjatullah</h4>
+                                        <br />
+                                        <h4>Specialist:</h4>
+                                        <ul>
+                                            <li>Pikiran</li>
+                                            <li>Spiritual</li>
+                                            <li>Fisik</li>
+                                            <li>Sosial</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="d-flex">
+                                    <div>
+                                        <h3>Jadwal</h3>
+                                        <ul>
+                                            <li>Selasa (12.00-16.00)</li>
+                                            <li>Rabu (13.00-18.00)</li>
+                                            <li>Sabtu (00.00-23.59)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center mx-auto text-center">
+                                        <h5>Rp 1.000</h5>
+                                        <input
+                                            class="btn rounded-pill px-5"
+                                            type="submit"
+                                            value="Reservasi"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <div class="d-flex">
+                                    <img
+                                        src="asset/logso.png"
+                                        alt=""
+                                        style="width: 13rem; object-fit: contain"
+                                    />
+                                    <div>
+                                        <h4>Dr. Shafwan Firjatullah</h4>
+                                        <br />
+                                        <h4>Specialist:</h4>
+                                        <ul>
+                                            <li>Pikiran</li>
+                                            <li>Spiritual</li>
+                                            <li>Fisik</li>
+                                            <li>Sosial</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="d-flex">
+                                    <div>
+                                        <h3>Jadwal</h3>
+                                        <ul>
+                                            <li>Selasa (12.00-16.00)</li>
+                                            <li>Rabu (13.00-18.00)</li>
+                                            <li>Sabtu (00.00-23.59)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center mx-auto text-center">
+                                        <h5>Rp 1.000</h5>
+                                        <input
+                                            class="btn rounded-pill px-5"
+                                            type="submit"
+                                            value="Reservasi"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col">
+                            <div>
+                                <div class="d-flex">
+                                    <img
+                                        src="asset/logso.png"
+                                        alt=""
+                                        style="width: 13rem; object-fit: contain"
+                                    />
+                                    <div>
+                                        <h4>Dr. Shafwan Firjatullah</h4>
+                                        <br />
+                                        <h4>Specialist:</h4>
+                                        <ul>
+                                            <li>Pikiran</li>
+                                            <li>Spiritual</li>
+                                            <li>Fisik</li>
+                                            <li>Sosial</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="d-flex">
+                                    <div>
+                                        <h3>Jadwal</h3>
+                                        <ul>
+                                            <li>Selasa (12.00-16.00)</li>
+                                            <li>Rabu (13.00-18.00)</li>
+                                            <li>Sabtu (00.00-23.59)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center mx-auto text-center">
+                                        <h5>Rp 1.000</h5>
+                                        <input
+                                            class="btn rounded-pill px-5"
+                                            type="submit"
+                                            value="Reservasi"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <div class="d-flex">
+                                    <img
+                                        src="asset/logso.png"
+                                        alt=""
+                                        style="width: 13rem; object-fit: contain"
+                                    />
+                                    <div>
+                                        <h4>Dr. Shafwan Firjatullah</h4>
+                                        <br />
+                                        <h4>Specialist:</h4>
+                                        <ul>
+                                            <li>Pikiran</li>
+                                            <li>Spiritual</li>
+                                            <li>Fisik</li>
+                                            <li>Sosial</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="d-flex">
+                                    <div>
+                                        <h3>Jadwal</h3>
+                                        <ul>
+                                            <li>Selasa (12.00-16.00)</li>
+                                            <li>Rabu (13.00-18.00)</li>
+                                            <li>Sabtu (00.00-23.59)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center mx-auto text-center">
+                                        <h5>Rp 1.000</h5>
+                                        <input
+                                            class="btn rounded-pill px-5"
+                                            type="submit"
+                                            value="Reservasi"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col">
+                            <div>
+                                <div class="d-flex">
+                                    <img
+                                    class="card-img"
+                                        src="asset/shafwan.jpg"
+                                        alt=""
+                                        style="max-width: 13rem;max-height: 13rem; object-fit: contain;"
+                                    />
+                                    <div>
+                                        <h4>Dr. Shafwan Firjatullah</h4>
+                                        <br />
+                                        <h4>Specialist:</h4>
+                                        <ul>
+                                            <li>Pikiran</li>
+                                            <li>Spiritual</li>
+                                            <li>Fisik</li>
+                                            <li>Sosial</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="d-flex">
+                                    <div>
+                                        <h3>Jadwal</h3>
+                                        <ul>
+                                            <li>Selasa (12.00-16.00)</li>
+                                            <li>Rabu (13.00-18.00)</li>
+                                            <li>Sabtu (00.00-23.59)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center mx-auto text-center">
+                                        <h5>Rp 1.000</h5>
+                                        <input
+                                            class="btn rounded-pill px-5"
+                                            type="submit"
+                                            value="Reservasi"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <div class="d-flex">
+                                    <img
+                                        src="asset/logso.png"
+                                        alt=""
+                                        style="width: 13rem; object-fit: contain"
+                                    />
+                                    <div>
+                                        <h4>Dr. Shafwan Firjatullah</h4>
+                                        <br />
+                                        <h4>Specialist:</h4>
+                                        <ul>
+                                            <li>Pikiran</li>
+                                            <li>Spiritual</li>
+                                            <li>Fisik</li>
+                                            <li>Sosial</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="d-flex">
+                                    <div>
+                                        <h3>Jadwal</h3>
+                                        <ul>
+                                            <li>Selasa (12.00-16.00)</li>
+                                            <li>Rabu (13.00-18.00)</li>
+                                            <li>Sabtu (00.00-23.59)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center mx-auto text-center">
+                                        <h5>Rp 1.000</h5>
+                                        <input
+                                            class="btn rounded-pill px-5"
+                                            type="submit"
+                                            value="Reservasi"
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -212,9 +379,10 @@
             </div>
         </section>
 
+        
         <footer>
             <div class="kiri">
-                <img src="asset/logso.png" alt="">
+                <img src="asset/logso.png" alt="" />
             </div>
             <div class="tengah">
                 <h3>Informasi Kontak</h3>
@@ -227,7 +395,7 @@
                     <p>@081732983217</p>
                 </div>
             </div>
-            
+
             <div class="kanan">
                 <h3>Follow Us</h3>
                 <div class="fkanan">
@@ -242,11 +410,11 @@
                     <i class="bi bi-twitter-x"></i>
                     <p>@nghohok</p>
                 </div>
-
             </div>
-            
-          </footer>
-          <div class="copy"><h2>&copy;ngohok 2025</h2></div>
+        </footer>
+        <div class="copy">
+            <h2>&copy;ngohok 2025</h2>
+        </div>
 
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

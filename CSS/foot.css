@@ -1,36 +1,12 @@
-/* Navbarrrrrrrrrrrrrrrrrrrrrrrr */
-.nav-link:hover {
-    color: #FFC6C6;
-}
-.no-hover:hover {
-    color: inherit;
-}
-
-/* Bodyyyyyyyyyyyyyyyyyyyyyyyyy */
-hr {
-    border: 0;
-    border-top: 5px solid #FFC6C6;
-    width: 75%;
-    margin: 0 auto;
-}
-.lead {
-    font-size: 30px;
-    text-align: justify;
-}
-
-.btn {
-    background-color: #FFC6C6;
-    margin-bottom: 10px;
-}
-
   /* ---------footet----------- */
   footer {
+    margin-top: 50px;
     color: #fff;
-    margin-top: 100%;
     font-size: 24px;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     background-color: #03a9f4;
   }
