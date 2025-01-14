@@ -1,0 +1,208 @@
+body {
+    background-color: #BFECFF;
+}
+.judul {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: white;
+    margin-bottom: 40px;
+}
+.valid {
+    display: flex;
+    width: 100%;
+    
+}
+.container {
+    width: 90%;
+    max-width: 400px;
+}
+.item {
+    border: 1px solid #000;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    position: relative;
+}
+.item label {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background-color: #fff;
+    padding: 0 5px;
+    font-size: 14px;
+}
+.item p {
+    margin: 0;
+    font-size: 16px;
+}
+.rekap {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    justify-content: center;
+    align-items: center;padding: 50px;
+    gap: 50px;
+}
+.satu {
+    justify-content: center;
+    align-items: center;
+
+}
+.bio img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+}
+.diri h5 {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: aqua;
+
+
+}
+
+.bayar {
+    background-color: white;
+    margin-left: 50px;
+    width: 50%;
+    padding: 50px;
+    text-align: center;
+}
+
+.btn-kategori {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .btn-kategori:hover {
+    background-color: #0056b3;
+  }
+
+  /* Gaya untuk kotak pilihan kategori */
+  .kategori-options {
+    display: none;
+    width: 412px;
+    margin-top: 10px;
+    position: absolute;
+    z-index: 10;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .kategori-options .category {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .kategori-options .category:hover {
+    background-color: #007bff;
+    color: white;
+  }
+
+  /* Pilihan kategori aktif */
+  .kategori-options .category.active {
+    background-color: #007bff;
+    color: white;
+  }
+
+  
+  button.btn-kategori:hover {
+    background-color: #0056b3;
+  }
+/* Style untuk tombol Konfirmasi */
+.btn-konfirmasi {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-konfirmasi:hover {
+    background-color: #0056b3;
+}
+
+/* Popup container */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Popup content */
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: scaleUp 0.3s ease;
+}
+
+/* Animasi scaling */
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Tombol Tutup */
+.btn-close {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #FF4C4C;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-close:hover {
+    background-color: #b30000;
+}
+
+/* Popup visible */
+.popup.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hidden popup */
+.hidden {
+    display: none;
+}

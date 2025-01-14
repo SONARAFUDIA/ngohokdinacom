@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ngohok</title>
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/flow4.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+
+        <section class="judul">
+            <h2>Pemilihan Jadwal Psikolog</h2>
+        </section>
+    <section>
+
+</section>
+        <section>
+            <div class="psikolog">
+                <div class="p-2" style="text-align: center;">
+
+                    <div class="container mt-5 mb-5">
+
+                        <div class="row row-cols-md-2  justify-content-center">
+                            <div class="col-lg-8 col-md-4 col-sm-12">
+                                <div class="card" style="width: 100%; height: auto; border: none;">
+
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-5">
+                                                <img src="asset/logso.png" alt="" class="rounded mx-auto d-block mb-4" style="width: 200px;">
+                                            </div>
+                                            <div class="col">
+                                                <h1 class="fw-bold fs-5 mt-3" style="margin-bottom: 20px; text-align: justify; margin-left: 10px;">Dr. Shafwan Firjatullah</h1>
+                                                <h1 class="fw-bold fs-5" style="text-align: justify; margin-left: 10px;">Specialist: </h1>
+                                                <ul class="text-start" style=" list-style-position: inside;">
+                                                    <li>Pikiran</li>
+                                                    <li>Spiritual</li>
+                                                    <li>Fisik</li>
+                                                    <li>Sosial</li>
+                                                </ul>
+                                            </div>
+                                            <hr class="custom-hr w-150">
+                                        </div>
+                                    </div>
+
+                                <div class="card-body">
+                                    <div class="container d-flex justify-content-center" style="align-items: center;">
+                                        <div class="row">
+                                            <div class="col" style="text-align: justify;">
+                                                <button id="btnKategori" class="btn-kategori">Pilih Jadwal</button>
+                                                
+                                                <!-- Pilihan kategori yang akan muncul setelah tombol diklik -->
+                                                <div id="kategori-options" class="kategori-options" style="display: none;">
+                                                  <div class="category">
+                                                    <input type="radio" id="selasa1" name="kategori">
+                                                    <label for="selasa1">Selasa (08.00-10.00)</label>
+                                                  </div>
+                                                  <div class="category">
+                                                    <input type="radio" id="selasa2" name="kategori">
+                                                    <label for="selasa2">Selasa (13.00-15.00)</label>
+                                                  </div>
+                                                  <div class="category">
+                                                    <input type="radio" id="rabu1" name="kategori">
+                                                    <label for="rabu1">Rabu (08.00-10.00)</label>
+                                                  </div>
+                                                  <div class="category">
+                                                    <input type="radio" id="rabu2" name="kategori">
+                                                    <label for="rabu2">Rabu (14.00-16.00)</label>
+                                                  </div>
+                                                  <div class="category">
+                                                    <input type="radio" id="jumat1" name="kategori">
+                                                    <label for="jumat1">Jumat (14.00-16.00)</label>
+                                                  </div>
+                                                  <div class="category">
+                                                    <input type="radio" id="jumat2" name="kategori">
+                                                    <label for="jumat2">Jumat (14.00-16.00)</label>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="col">
+                                                <h1 class="fw-bold fs-5 mt-3">Rp. 1000</h1>
+                                                <div class="d-grid gap-2 col-9 mx-auto">
+                                                    <input class="btn" type="submit" style="border-radius: 100px; background-color: #007BFF; color: white;" value="Reservasi">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                
+            </div>
+            
+        </section>
+        
+    </body>
+</html>
+
+<script>
+    // Mengambil elemen tombol dan kategori
+  const btnKategori = document.getElementById('btnKategori');
+  const kategoriOptions = document.getElementById('kategori-options');
+
+  // Fungsi untuk toggle visibility kategori
+  btnKategori.addEventListener('click', function() {
+    // Menampilkan atau menyembunyikan kategori
+    if (kategoriOptions.style.display === 'none' || kategoriOptions.style.display === '') {
+      kategoriOptions.style.display = 'block';
+    } else {
+      kategoriOptions.style.display = 'none';
+    }
+  });
+
+</script>
