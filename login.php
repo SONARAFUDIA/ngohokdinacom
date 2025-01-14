@@ -24,7 +24,7 @@
                     <label for="password" class="visually-hidden">Password</label>
                     <input type="password" id="password" name="password" class="form-input" placeholder="Password" required aria-label="Password">
                 </div>
-                <a href="#" class="forgot-password" tabindex="0">Lupa Password?</a>
+                <a href="lupapw.php" class="forgot-password" tabindex="0">Lupa Password?</a>
                 <button type="submit" class="submit-button">Login</button>
                 <div class="auth-toggle" role="group" aria-label="Authentication options">
                     <button type="button" class="toggle-button toggle-button-active">Login</button>
