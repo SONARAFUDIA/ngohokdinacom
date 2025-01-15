@@ -1,3 +1,42 @@
+<?php
+session_start(); // Mulai sesi
+
+include "koneksi.php"; // Sambungkan ke database
+
+// Ambil username dari sesi
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
+
+// Periksa apakah username tersedia
+if (empty($username)) {
+    echo "Anda harus login terlebih dahulu.";
+    exit;
+}
+
+// Query ke database
+$tampilkan = "SELECT * FROM user WHERE username = ?";
+$user = $conn->prepare($tampilkan);
+
+if (!$user) {
+    echo "Gagal mempersiapkan pernyataan: " . $conn->error;
+    exit;
+}
+
+$user->bind_param("s", $username);
+
+if (!$user->execute()) {
+    echo "Gagal menjalankan pernyataan: " . $user->error;
+    exit;
+}
+
+$result = $user->get_result();
+
+if ($result->num_rows === 0) {
+    echo "Pengguna tidak ditemukan.";
+    exit;
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -135,18 +174,27 @@
                         aria-labelledby="pills-home-tab"
                         tabindex="0"
                     >
+                        <form action="" method="post" enctype="multipart/form-data">
                         <div class="container border p-3 mb-3">
                             <div class="d-flex">
                                 <i class="bi bi-person-circle h1"></i>
                                 <div class="container">
                                     <textarea
                                         class="form-control"
+                                        name="postingan"
                                         id="exampleFormControlTextarea1"
                                         rows="3"
                                     ></textarea>
                                     <div class="d-flex justify-content-between pt-2">
                                         <i class="bi bi-card-image h3"></i>
                                         <input
+                                            name="gambar"
+                                            type="file"
+                                            class="form-control"
+                                            accept="image/*"
+                                        />
+                                        <input
+                                            name="simpan"
                                             class="btn btn-primary"
                                             type="submit"
                                             value="Release"
@@ -155,44 +203,43 @@
                                 </div>
                             </div>
                         </div>
+                        </form>
 
                         <br />
                         <br />
-
-                        <div class="container border p-3 mb-3">
-                            <div class="d-flex">
-                                <i class="bi bi-person-circle h1 me-3"></i>
-                                <div>
-                                    <h4>fabi</h4>
-                                    <p>
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
-                                        atque et officia exercitationem fuga similique minus ipsam
-                                        fugiat voluptatibus. Ab similique eos laudantium fugiat
-                                        molestias eius qui itaque beatae libero?
-                                        <br />
-                                        <br />
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut
-                                        atque et officia exercitationem fuga similique minus ipsam
-                                        fugiat voluptatibus. Ab similique eos laudantium fugiat
-                                        molestias eius qui itaque beatae libero?
-                                    </p>
+                        <?php
+                        while ($row = $result->fetch_assoc()):
+                            // Periksa apakah postingan tidak kosong
+                            if (!empty($row['postingan'])): ?>
+                                <div class="container border p-3 mb-3">
                                     <div class="d-flex">
-                                        <div class="d-flex me-4">
-                                            <i class="bi bi-heart me-1"></i>
-                                            <p>27</p>
-                                        </div>
-                                        <div class="d-flex me-4">
-                                            <i class="bi bi-chat me-1"></i>
-                                            <p>27</p>
-                                        </div>
-                                        <div class="d-flex me-4">
-                                            <i class="bi bi-eye me-1"></i>
-                                            <p>27</p>
+                                        <i class="bi bi-person-circle h1 me-3"></i>
+                                        <div>
+                                            <h4><?php echo htmlspecialchars($username); ?></h4>
+                                            <p>
+                                                <?php echo nl2br(htmlspecialchars($row['postingan'])); ?>
+                                            </p>
+                                            <div class="d-flex">
+                                                <div class="d-flex me-4">
+                                                    <i class="bi bi-heart me-1"></i>
+                                                    <p>27</p>
+                                                </div>
+                                                <div class="d-flex me-4">
+                                                    <i class="bi bi-chat me-1"></i>
+                                                    <p>27</p>
+                                                </div>
+                                                <div class="d-flex me-4">
+                                                    <i class="bi bi-eye me-1"></i>
+                                                    <p>27</p>
+                                                </div>
+                                            </div>
+                                            <small>Posted on: <?php echo $row['tanggal']; ?></small>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            <?php endif; // Tutup if postingan tidak kosong ?>
+                        <?php endwhile; ?>
+
 
                         <div class="container border p-3 mb-3">
                             <div class="d-flex">
@@ -349,6 +396,92 @@
             </div>
         </footer>
         <div class="copy"><h2>&copy;ngohok 2025</h2></div>
+
+        <?php
+        session_start();
+        include "koneksi.php";
+        include "upload_foto.php";
+            if (isset($_POST['simpan'])) {
+
+                // Ambil data dari form
+                $tanggal = date("Y-m-d H:i:s");
+                $username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
+            
+                if (empty($username)) {
+                    echo "<script>
+                            alert('Anda harus login terlebih dahulu!');
+                            document.location='login.php';
+                          </script>";
+                    exit;
+                }
+            
+                $gambar = '';
+                $nama_gambar = $_FILES['gambar']['name'];
+            
+                // Cek jika ada gambar baru yang diupload
+                if ($nama_gambar != '') {
+                    // Panggil fungsi upload_foto
+                    $cek_upload = upload_file($_FILES["gambar"]);
+            
+                    if ($cek_upload['status']) {
+                        $gambar = $cek_upload['message'];
+                    } else {
+                        echo "<script>
+                                alert('" . $cek_upload['message'] . "');
+                                document.location='admin.php?page=gallery';
+                              </script>";
+                        die;
+                    }
+                }
+                
+                $postingan = isset($_POST['postingan']) ? trim($_POST['postingan']) : '';
+
+                // Validasi apakah postingan kosong
+                if (empty($postingan)) {
+                    echo "<script>
+                            alert('Postingan tidak boleh kosong!');
+                            document.location='form.php';
+                          </script>";
+                    exit;
+                }
+
+                // Jika ada id, lakukan update
+                if (isset($_POST['id'])) {
+                    $id = $_POST['id'];
+            
+                    if ($nama_gambar == '') {
+                        $gambar = $_POST['gambar_lama']; // Pakai gambar lama
+                    } else {
+                        // Hapus gambar lama
+                        unlink("img/" . $_POST['gambar_lama']);
+                    }
+
+                    $stmt = $conn->prepare("UPDATE user SET gambar = ?, tanggal = ?, postingan = ?,  username = ? WHERE id = ?");
+                    $stmt->bind_param("ssssi",  $gambar, $tanggal, $postingan, $username, $id);
+                    $simpan = $stmt->execute();
+                } else {
+                    // Insert data baru
+                    $stmt = $conn->prepare("INSERT INTO user ( gambar, tanggal, postingan, username) VALUES (?, ?, ?, ?)");
+                    $stmt->bind_param("ssss",  $gambar, $tanggal, $postingan, $username);
+                    $simpan = $stmt->execute();
+                }
+            
+                // Berhasil simpan
+                if ($simpan) {
+                    echo "<script>
+                            document.location='release.php';
+                          </script>";
+                } else {
+                    echo "<script>
+                            alert('Data gagal disimpan!');
+                            document.location='admin.php?page=gallery';
+                          </script>";
+                }
+            
+                $stmt->close();
+                $conn->close();
+            }
+        ?>
 
         <!-- CDN script -->
         <script

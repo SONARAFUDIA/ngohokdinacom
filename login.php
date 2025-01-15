@@ -23,7 +23,7 @@
                     <input type="password" id="password" name="password" class="form-input" placeholder="Password" required aria-label="Password">
                 </div>
                 <a href="lupapw.php" class="forgot-password" tabindex="0">Lupa Password?</a>
-                <button type="submit" class="submit-button">Login</button>
+                <button type="submit" name="login" class="submit-button">Login</button>
                 <div class="auth-toggle" role="group" aria-label="Authentication options">
                     <button type="button" class="toggle-button toggle-button-active">Login</button>
                     <button type="button" class="toggle-button toggle-button-inactive">
@@ -31,16 +31,13 @@
                     </button>
                 </div>
             </form>
-            <?= login(); ?>
         </div>
     </div>
     <?php 
     session_start();
-
-    function login(): void {
-        include "koneksi.php"; // Pastikan koneksi.php memiliki koneksi yang valid
+    include "koneksi.php"; // Pastikan koneksi.php memiliki koneksi yang valid
     
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['login'])) {
             // Mengambil input dari form
             $input = trim($_POST['username']); 
     
@@ -76,17 +73,22 @@
                 //jika ada, simpan variable username pada session
                 $_SESSION['username'] = $row['username'];                
                 //mengalihkan ke halaman admin
-                header("location:index.html");
+                echo "<script>
+                    alert('Login berhasil!');
+                    document.location='index.php';
+                  </script>";
               } else {
               //jika tidak ada (gagal), alihkan kembali ke halaman login
-                header("location:login.php");
+              echo "<script>
+              alert('Password salah!');
+              document.location='login.php';
+            </script>";
               }
     
             // Menutup koneksi
             $stmt->close();
             $conn->close();
         }
-    }
     ?>
 </body>
 </html>
