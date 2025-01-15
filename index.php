@@ -1,3 +1,20 @@
+<?php
+session_start();
+
+// Periksa apakah sesi username sudah ada
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
+
+// Jika sesi tidak ada, arahkan kembali ke login
+if (empty($username)) {
+    echo "<script>
+            alert('Anda harus login terlebih dahulu!');
+            document.location='login.php';
+          </script>";
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -57,7 +74,7 @@
                             <a class="nav-link" href="article.html">Article</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="release.html">Release</a>
+                            <a class="nav-link" href="release.php">Release</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="reservasi.html">Reservation</a>
